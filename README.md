@@ -1,5 +1,5 @@
 # Volatile
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/) [![Build Status](https://travis-ci.org/delvedor/Volatile.svg?branch=master)](https://travis-ci.org/delvedor/Volatile) [![Coverage Status](https://coveralls.io/repos/github/delvedor/Volatile/badge.svg?branch=master)](https://coveralls.io/github/delvedor/Volatile?branch=master)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/) [![Build Status](https://travis-ci.org/delvedor/Volatile.svg?branch=master)](https://travis-ci.org/delvedor/Volatile) [![Coverage Status](https://coveralls.io/repos/github/delvedor/Volatile/badge.svg?branch=master&bust=1)](https://coveralls.io/github/delvedor/Volatile?branch=master)
 
 Volatile is an in-memory, volatile key-value store database.
 It can memorize all the standard javascript types.  
