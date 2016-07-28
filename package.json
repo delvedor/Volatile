@@ -1,0 +1,24 @@
+{
+  "name": "volatile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "volatile.js",
+  "scripts": {
+    "pretest": "standard",
+    "test": "tap test/*.js"
+  },
+  "keywords": [],
+  "author": "Tomas Della Vedova - @delvedor (http://delved.org)",
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^7.1.2",
+    "tap": "^6.2.0"
+  },
+  "dependencies": {
+    "object.omit": "^2.0.0",
+    "tyval": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  }
+}
