@@ -11,6 +11,7 @@
   "author": "Tomas Della Vedova - @delvedor (http://delved.org)",
   "license": "MIT",
   "devDependencies": {
+    "coveralls": "^2.11.12",
     "standard": "^7.1.2",
     "tap": "^6.2.0"
   },
