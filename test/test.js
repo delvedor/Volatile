@@ -3,7 +3,7 @@
 const tap = require('tap')
 const test = tap.test
 const fs = require('fs')
-const db = require('../volatile')
+const db = require('../volatile')()
 
 test('volatile', (t) => {
   t.plan(1)
