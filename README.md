@@ -13,7 +13,7 @@ As you can guess from the name, its peculiarity it is the fact of being volatile
 
 ## Usage
 ```javascript
-const db = require('volatile')
+const db = require('volatile')()
 
 db.put('key1', 'value1', (err) => {
   if (err) console.log(err)
@@ -84,6 +84,7 @@ Generates a json dump of the database.
 
 ## TODO
 - [ ] Add *.batch* function
+- [ ] Add `overwrite` option
 
 ## Contributing
 If you feel you can help in any way, be it with examples, extra testing, or new features please open a pull request or open an issue.
