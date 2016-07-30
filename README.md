@@ -35,6 +35,16 @@ db.del('key1', (err) => {
   if (err) console.log(err)
 })
 ```
+#### Options
+
+| option        | default      | description  |
+| :------------ |:-------------| :------------|
+| `overwrite`     | `true` | if setted to *false*, `.put()` returns an error if the key already exists. |
+
+How to pass options to Volatile:
+```javascript
+const db = require('volatile')({ overwrite: false })
+```
 
 ## API
 
