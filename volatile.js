@@ -2,6 +2,7 @@
 
 const tyval = require('tyval')
 const remove = require('object.omit')
+const safeStringify = require('fast-safe-stringify')
 const writeFile = require('fs').writeFile
 
 const keyVal = tyval.string().min(1).toFunction()
@@ -9,6 +10,9 @@ const noop = err => { if (err) throw err }
 
 function Volatile (options) {
   this.options = options || {}
+  if (this.options.overwrite === undefined) {
+    this.options.overwite = true
+  }
   this.db = {}
 }
 
@@ -28,7 +32,14 @@ Volatile.prototype.put = function (key, value, callback) {
   if (!keyVal(key)) {
     return callback({ error: 'Key not valid' })
   }
-  this.db[key] = value
+  if (this.options.overwite) {
+    this.db[key] = value
+  } else {
+    if (this.db.hasOwnProperty(key)) {
+      return callback({ error: 'Key already exists' })
+    }
+    this.db[key] = value
+  }
   return callback(null)
 }
 
@@ -64,7 +75,7 @@ Volatile.prototype.drop = function (callback) {
 
 Volatile.prototype.dump = function (name, callback) {
   callback = callback || noop
-  let json = `${JSON.stringify(this.db, null, 2)}\n`
+  let json = `${safeStringify(this.db)}\n`
   writeFile(`${__dirname}/${name}.json`, json, (err) => {
     callback(err)
   })
