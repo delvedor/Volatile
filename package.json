@@ -1,7 +1,7 @@
 {
-  "name": "volatile",
+  "name": "@delvedor/volatile",
   "version": "1.0.0",
-  "description": "",
+  "description": "In-memory, volatile key-value store database.",
   "main": "volatile.js",
   "scripts": {
     "pretest": "standard",
@@ -13,12 +13,12 @@
   "devDependencies": {
     "coveralls": "^2.11.12",
     "standard": "^7.1.2",
-    "tap": "^6.2.0"
+    "tap": "^6.3.0"
   },
   "dependencies": {
     "fast-safe-stringify": "^1.0.9",
     "object.omit": "^2.0.0",
-    "tyval": "^3.0.0"
+    "tyval": "^3.1.0"
   },
   "engines": {
     "node": ">=4.0.0"
