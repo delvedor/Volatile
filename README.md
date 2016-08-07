@@ -1,15 +1,23 @@
 # Volatile
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/) [![Build Status](https://travis-ci.org/delvedor/Volatile.svg?branch=master)](https://travis-ci.org/delvedor/Volatile) [![Coverage Status](https://coveralls.io/repos/github/delvedor/Volatile/badge.svg?branch=master&bust=1)](https://coveralls.io/github/delvedor/Volatile?branch=master)
 
+> *Currently Volatile is a pet project, use at your own risk.  
+> Obviously if you like it and you want to contribute to make it something more, contributions are well accepted!*
+
 Volatile is an in-memory, volatile key-value store database.
 It can memorize all the standard javascript types.  
 It can be useful for testing or for saving some parameters/configuration or on Heroku if you don't need a more sophisticated database.
 
 As you can guess from the name, its peculiarity it is the fact of being volatile, all your stored data is lost if you relaunch the process. *(Don't worry, if you really need it, you can use the dump function)*
 
-*.get*, *.put* and *.del* api are designed in the same way of LevelDB, so if you need to pass from Volatile to LevelDB or vice versa you don't need to rewrite the code!
+`.get`, `.put` and `.del` api are designed in the same way of LevelDB, so if you need to pass from Volatile to LevelDB or vice versa you don't need to rewrite the code!
 
 **Needs Node.js ≥ 4.0.0**
+
+## Install
+```
+npm install @delvedor/volatile --save
+```
 
 ## Usage
 ```javascript
@@ -39,7 +47,7 @@ db.del('key1', (err) => {
 
 | option        | default      | description  |
 | :------------ |:-------------| :------------|
-| `overwrite`     | `true` | if setted to *false*, `.put()` returns an error if the key already exists. |
+| `overwrite`   | `true`       | if setted to *false*, `.put()` returns an error if the key already exists. |
 
 How to pass options to Volatile:
 ```javascript
@@ -93,8 +101,8 @@ Drops the databse.
 Generates a json dump of the database.
 
 ## TODO
+- [x] Add `overwrite` option
 - [ ] Add *.batch* function
-- [ ] Add `overwrite` option
 
 ## Contributing
 If you feel you can help in any way, be it with examples, extra testing, or new features please open a pull request or open an issue.
